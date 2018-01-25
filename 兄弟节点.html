@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>兄弟节点</title>
+</head>
+<body>
+	<ul>
+		<li>大娃</li>
+		<li>二娃</li>
+		<li id="sk">三娃</li>
+		<!-- 我是坏蛋 -->
+		<li>四娃</li>
+		<li>五娃</li>
+	</ul>
+</body>
+		<script>
+		// 获取该元素的ID值
+		var sk=document.getElementById("sk")
+		// 替代函数              
+		function nextSib(obj){
+			// 如果它的文本节点不等于元素节点
+			while(obj.nextSibling.nodeType!=1){
+				obj=obj.nextSibling;
+				// 如果它的文本节点等于元素节点时或者文本节点等于文档节点时
+				if(obj.nextSibling.nodeType==1||obj.nextSibling.nodeType==9){
+				return obj.nextSibling
+				}
+			}	
+		}
+		console.log(nextSib(sk))
+		</script>
+</html>

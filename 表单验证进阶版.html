@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	p span{display:none;color: #f0f;}
+	p .show{display: inline;}
+	</style>
+</head>
+<body>
+	<h2>注册</h2>
+	<p>
+	邮箱：<input class="shuru" type="text" >
+	<span>请输入邮箱</span>
+	</p>
+	<p>
+	密码：<input class="shuru" type="password" >
+	<span>请输入密码</span>
+	</p>
+	<p>		
+	官方微博名:<input class="shuru" type="text" >
+	<span>请输入微博名</span>
+	</p>
+	<button id="btn">立即注册</button>
+	<script>
+	var btn=document.getElementById("btn")
+	var shurulist=document.getElementsByClassName("shuru")
+	btn.onclick=function(){
+		for(var i=0;i<shurulist.length;i++){
+			if(shurulist[i].value==""){
+			shurulist[i].parentNode.getElementsByTagName("span")[0].className="show";
+			}
+			else{
+            shurulist[i].parentNode.getElementsByTagName("span")[0].className="";
+			}
+		}
+	}
+	</script>
+</body>
+</html>

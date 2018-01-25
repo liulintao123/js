@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	p span{display:none;color: #f0f;}
+	p .show{display: inline;}
+	</style>
+</head>
+<body>
+	<h2>注册</h2>
+	<p>
+	邮箱：<input type="text" id="email">
+	<span id="email$">请输入邮箱</span>
+	</p>
+	<p>
+	密码：<input type="password" id="password">
+	<span id="password$">请输入密码</span>
+	</p>
+	<p>		
+	官方微博名:<input type="text" id="weibo">
+	<span id="weibo$">请输入微博名</span>
+	</p>
+	<button id="btn">立即注册</button>
+	<script>
+	var email=document.getElementById("email")
+	var password=document.getElementById("password")
+	var weibo=document.getElementById("weibo")
+	var btn=document.getElementById("btn")
+	var email$=document.getElementById("email$")
+	var password$=document.getElementById("password$")
+	var weibo$=document.getElementById("weibo$")
+	btn.onclick=function(){
+		if(email.value&&password.value&&weibo.value){
+			alert("注册成功")
+			email$.className=""
+			password$.className=""
+			weibo$.className=""
+		}
+		else{
+			if(email.value==""){
+				email$.className="show"
+			}
+			if(password.value==""){
+				password$.className="show"
+			}
+			if(weibo.value==""){
+				weibo$.className="show"
+			}
+		}
+	}
+	</script>
+</body>
+</html>

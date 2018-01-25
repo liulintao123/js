@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>20个闰年</title>
+</head>
+<body>
+	<script>
+	var n=2018;
+	var a=1;
+	// 记录次数
+	while(a<=20){
+		if(n%4==0&&n%100!=0||n%400==0){
+			console.log(n)
+			a++;
+		}
+			n++;
+	}
+	</script>
+</body>
+</html>

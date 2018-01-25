@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>省市区</title>
+	<script src="data.js"></script>
+	<script>
+	for(var a in data){
+		document.write("<h2>"+data[a].name+"</h2>")	
+		console.log(data[a].city)
+		var b=data[a].city;
+		for(var n in b){
+		 	document.write("<h4>"+b[n].name+","+"</h4>")
+		 	if(  )
+		 	console.log(b[n].name)
+		}
+		document.write("<hr/>")	
+	} 
+	</script>
+	<style type="text/css">
+	h2{color:#44d012}
+	h4{display: inline-block;
+		color:yellow;}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+	<script>
+	function abb(){
+		var n=0;
+		var b=0;
+		while(n<arguments.length){
+			if(typeof arguments[n]=="number"){
+			b=b+arguments[n]	
+			}
+			n++;			
+			if(typeof arguments[n]!=="number"){
+			console.log("警告：在第"+(n+1)+"个实参出现意外")
+			}
+					
+		}
+			return b;
+	}
+		 console.log (abb(10,"刘林涛",20,30,40))
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

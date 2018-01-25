@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>侧边栏</title>
+	<style>
+	*{margin:0;padding:0;}
+	html,body{
+		height: 100%;
+	}
+	#lan{
+		height: 100%;
+		background-color:#333;
+		color: #fff;
+		font-size: 26px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+	}
+	#mask{
+		width: 100%;
+		height:100%;
+		background-color: #000;
+		position:absolute;
+		top: 0;
+		left:0;
+		opacity: 0;
+		z-index: 1;
+	}
+	#btn{
+		margin-left: 300px;
+	}
+	</style>
+</head>
+<body>
+	<div id="lan" style="left:-300px">
+		侧边栏
+	<button>收回侧边栏</button>
+	</div>
+	<button id="btn">出现侧边栏</button>
+	<div id="mask"></div>
+	<script>
+	var btn=document.getElementById("btn")
+	var lan=document.getElementById("lan")
+	btn.onclick=function(){
+		setInterval(function(){
+		var ml=parseInt(lan.style.left)
+			if(ml<0){
+				lan.style.left=(ml+20)+"px"
+				ml=ml+20
+			}
+		},15)
+	}
+
+	</script>	
+</body>
+</html>

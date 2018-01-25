@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插入</title>	
+</head>
+<body>
+	<h2>学生信息管理系统</h2>
+	<style>
+
+	</style>
+	<p>
+	姓名：<input type="text" id="name"> 年龄:<input type="text" id="age">
+	<button id="btn">插入数据</button>
+	<hr/>
+	</p>
+	<thead>
+		<tbody>
+			<tr class="xianshi">
+				<td>编号</td>
+				<td class="xingming">姓名</td>
+				<td class="nianling">年龄</td>
+				<td>性别</td>
+			</tr>
+			<tr>
+				
+			</tr>
+		</tbody>
+	</thead>
+	<script>
+	var button=document.getElementById("btn")
+	btn.onclick=function(){
+		var name=document.getElementById("name").value		
+		var age=document.getElementById("age").value
+		var xianshi=document.getElementsByTagName("tr")
+		var trlist=document.getElementsByTagName("td")
+	}
+	</script>	
+</body>
+</html>

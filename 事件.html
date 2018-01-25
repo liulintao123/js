@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+	<style>
+	.gray{
+		width: 400px;
+		height:400px;
+		background-color: #e0e0e0;
+		color: #000;
+		font-size: 44px;
+		float: left;
+		margin-bottom:20px;
+		margin-left: 20px;
+		text-align: center;
+		line-height: 400px; 
+	}
+	.red{
+		color: red;
+	}
+	.yellow{
+		color: yellow;
+	}
+	</style>
+</head>
+<body>
+	<div class="gray">a</div>
+	<div class="gray">b</div>
+	<div class="gray">c</div>
+	<div class="gray">d</div>
+	<div class="gray">e</div>
+	<div class="gray">f</div>
+	<div class="gray">g</div>
+	<div class="gray">h</div>
+	<div class="gray">i</div>
+	<script>
+	var divlist=document.getElementsByTagName("div")
+	for(i=0;i<divlist.length;i++){
+		divlist[i].onclick = function(){
+			alert(this.innerHTML)
+		}
+	}
+	</script>
+</body>
+</html>

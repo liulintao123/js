@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象</title>
+	<style>
+	*{margin:0;padding:0;}
+	html,body{height: 100%;}
+	#head{
+	height: 100%;
+	background-color: #f99;
+	}
+	</style>
+</head>
+<body>
+	<div id="head"></div>
+	<script>
+	var head=document.getElementById("head")
+	head.onmousemove=function(event){
+		head.innerHTML="X:" + event.offsetX + ",Y:" + event.offsetY;
+	}
+	</script>
+</body>
+</html>
