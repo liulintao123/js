@@ -77,11 +77,12 @@
       var ul=document.getElementsByClassName("photo")[0].getElementsByTagName("ul")[0];
       var liList = ul.getElementsByTagName("li")
       var photo = document.getElementsByClassName("photo")[0];
+      var yuandian=document.getElementById("yuandian").getElementsByTagName("span")
        // 记录当前所在的张数
       var n=0;    
        function toNext(){
          n++;
-         if(n < liList.length){
+         if(n < liList.length){                                             
            var t = setInterval(function(){
              //每次移动之前获取当前ul的marginLeft值
              var ml = parseInt(ul.style.marginLeft);
@@ -96,8 +97,7 @@
            },20)
          }
          else{
-           n = 0;
-           
+           n = 0;          
            var t = setInterval(function(){
              //每次移动之前获取当前ul的marginLeft值
              var ml = parseInt(ul.style.marginLeft);
@@ -156,9 +156,12 @@
         clearInterval(autoPlay);
       }
       photo.onmouseleave = function(){
-        var autoPlay = setInterval(function(){
+        autoPlay = setInterval(function(){ 
           toNext();
         },3000)
+      }
+      for(var i=0;i<spanlist.length;i++){
+        spanlist.innerHTML=""
       }
 	</script>
 </body>
